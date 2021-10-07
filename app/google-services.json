@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509304152524",
+    "project_id": "desafio3-14ccc",
+    "storage_bucket": "desafio3-14ccc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509304152524:android:a1353a929fb52dd01c7d69",
+        "android_client_info": {
+          "package_name": "com.use.feedfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509304152524-etg04bbjulumceumvpr34mudme00fecr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJQ1ompOo7QwKWT8jDuiRuhNhKtRMVIDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509304152524-etg04bbjulumceumvpr34mudme00fecr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
