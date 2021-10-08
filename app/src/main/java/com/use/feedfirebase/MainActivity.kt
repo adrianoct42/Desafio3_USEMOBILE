@@ -19,3 +19,8 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+// Usaremos uma recycle view para exibição dos posts?
+// Usaremos adapter?
+// Toolbar em baixo?
+//

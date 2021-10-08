@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ADRIANO/UFOP/CURSOS/BOOTCAMPS/ANDROID_USEMOBILE/Desafio3_USEMOBILE/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/ADRIANO/UFOP/CURSOS/BOOTCAMPS/ANDROID_USEMOBILE/Desafio3_USEMOBILE/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/ADRIANO/UFOP/CURSOS/BOOTCAMPS/ANDROID_USEMOBILE/Desafio3_USEMOBILE/app/src/main/res/layout/fragment_feed.xml" value="0.22" />
+        <entry key="..\:/ADRIANO/UFOP/CURSOS/BOOTCAMPS/ANDROID_USEMOBILE/Desafio3_USEMOBILE/app/src/main/res/layout/fragment_publish.xml" value="0.20416666666666666" />
+        <entry key="..\:/ADRIANO/UFOP/CURSOS/BOOTCAMPS/ANDROID_USEMOBILE/Desafio3_USEMOBILE/app/src/main/res/layout/rv_feed.xml" value="0.21408711770157554" />
       </map>
     </option>
   </component>
