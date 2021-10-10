@@ -1,26 +1,32 @@
 package com.use.feedfirebase
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import org.w3c.dom.Text
 
-class FeedAdapter (
-    private val posts: List<Post>, private val function: (post: Post) -> Unit
-) : RecyclerView.Adapter<FeedAdapter.MovieViewHolder>() {
+// SHIFT F6 muda todos os nomes selecionados
 
-    class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class FeedAdapter: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>() {
+
+    private var posts: List<Post> = emptyList()
+    class FeedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         // QUARTO
         fun bindPosts(post: Post) {
-
+            Log.d("FeedAdapter", "TO NO ADAPTEEEEEER")
+            // USANDO BINDING: binding.text_postagem_rv.text = post.textoDaPostagem
+            itemView.findViewById<TextView>(R.id.texto_postagem_rv).text = post.textoDaPostagem
         }
     }
 
     // SEGUNDO
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        return MovieViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedViewHolder {
+        return FeedViewHolder(
             LayoutInflater
                 .from(parent.context).inflate(R.layout.rv_feed, parent, false)
         )
@@ -32,10 +38,13 @@ class FeedAdapter (
     }
 
     // TERCEIRO
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FeedViewHolder, position: Int) {
         holder.bindPosts(posts[position])
-        holder.itemView.setOnClickListener {
-            function(posts[position])
-        }
     }
+    @SuppressLint("NotifyDataSetChanged")
+    fun setList(newList: List<Post>){
+        posts = newList
+        notifyDataSetChanged()
+    }
+
 }
