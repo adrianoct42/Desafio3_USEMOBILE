@@ -1,1 +1,3 @@
 # Desafio3_USEMOBILE
+Infelizmente, o desafio se mostrou maior que minha capacidade atual de implementá-lo com notoriedade...
+Peço desculpas ao pessoal do bootcamp, sempre muito solícitos das minhas inúmeras dúvidas, dei o meu melhor.
