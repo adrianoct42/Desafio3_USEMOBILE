@@ -35,18 +35,21 @@ class FeedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        buscaFirebase()
+
         var texto: String = ""
         var nome: String = usuario1.name
 
         binding.rvPosts.adapter = feedAdapter
 
         binding.btnPublicar.setOnClickListener {
-            usuario1.numberPosts ++
+            usuario1.numberPosts++
             texto = binding.postagem.text.toString()
             usuario1.post.add(Post(texto))
             feedAdapter.setList(usuario1.post)
 
             // Adicionando no Firebase
+
             db.collection("Postagens Do Usuário").add(usuario1).addOnSuccessListener {
                 Log.d("FeedFragment", "Postagem feita com sucesso!!!")
             }.addOnFailureListener {
@@ -54,9 +57,22 @@ class FeedFragment : Fragment() {
             }
 
         }
+    }
 
+    // Busca dados ja postados no Firebase:
+    // No entanto, precisei comentar ela por apresentar o seguinte erro,
+    // eu nao entender como resolvê-lo -->
+    // java.lang.NullPointerException: null cannot be cast to non-null type kotlin.String
 
-//        binding.postagem.addTextChangedListener(object : TextWatcher {
+//    private fun buscaFirebase() {
+//        db.collection("Postagens Do Usuário").get().addOnSuccessListener { posts ->
+//            for (post in posts) {
+//                Log.d("FeedFragment", post.data["text"] as String).toString()
+//            }
+//        }
+//    }
+
+    //        binding.postagem.addTextChangedListener(object : TextWatcher {
 //            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 //            }
 //
@@ -69,27 +85,5 @@ class FeedFragment : Fragment() {
 //                FeedAdapter(usuario1.post)
 //            }
 //        })
-
-//        publica()
-//        leituraPosts()
-//
-//    }
-
-//    fun publica() {
-//        db.collection("Postagens").add(usuario1).addOnSuccessListener {
-//            Log.d("FeedFragment", "Post realizado com sucesso!")
-//        }.addOnFailureListener {
-//            Log.d("FeedFragment", "Erro! $it")
-//        }
-//    }
-//
-//    fun leituraPosts() {
-//        db.collection("Postagens").get().addOnSuccessListener { postagens ->
-//            for (post in postagens) {
-//                Log.d("FeedFragment", post.data as String)
-//            }
-//        }
-    }
-
 
 }
